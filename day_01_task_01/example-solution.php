@@ -1,5 +1,7 @@
 <?php
 
+require __DIR__ . '/CaloriesCalculator.php';
+
 $elvesCarryingCalories = [
 	[
 		1000,
@@ -23,15 +25,4 @@ $elvesCarryingCalories = [
 	]
 ];
 
-$mostCalories = null;
-
-foreach ($elvesCarryingCalories as $carriedCalories) {
-	$totalCarriedCalories = array_sum($carriedCalories);
-	
-	if ($mostCalories === null || $mostCalories < $totalCarriedCalories)
-	{
-		$mostCalories = $totalCarriedCalories;
-	}
-}
-
-echo $mostCalories;
+echo CaloriesCalculator::calculate($elvesCarryingCalories);
