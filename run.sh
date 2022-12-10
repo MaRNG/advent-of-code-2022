@@ -1,1 +1,1 @@
-sudo docker container run --rm -v $(pwd):/app/ php:8.1-cli php /app/$1/run.php
+sudo docker container run --rm -v $(pwd):/app/ php:8.2-cli-alpine php /app/$1/run.php
